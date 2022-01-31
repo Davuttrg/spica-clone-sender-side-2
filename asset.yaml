@@ -47,29 +47,3 @@ spec:
   httpOptions:
     method: Get
     path: /sender
----
-# TRIGGER - Initialize
-apiVersion: function/v1
-kind: Trigger
-metadata:
-  name: sender-dashboard
-spec:
-  name: senderDashboard
-  func: clone
-  type: http
-  httpOptions:
-    method: Get
-    path: /senderDashboard
----
-# SENDER DASHBOARD
-apiVersion: dashboard/v1
-kind: Dashboard
-metadata:
-  name: sender-dashboard
-spec:
-  name: Sender
-  icon: swap_vert
-  components:
-    - name: Export
-      url: api:/fn-execute/senderDashboard
-      type: card
