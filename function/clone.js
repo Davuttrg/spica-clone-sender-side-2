@@ -17,7 +17,7 @@ You must raise the function maximum timeout up to 300 seconds from the Hq dashbo
 
 */
 
-import * as Bucket from "@spica-devkit/bucket";
+import Bucket from "@spica-devkit/bucket";
 const fetch = require("node-fetch");
 
 export async function sender(req, res) {
